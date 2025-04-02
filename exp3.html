@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="datetime"></p>
+
+<script>
+    function updateDateTime() {
+        const now = new Date();
+        document.getElementById("datetime").innerText = now.toLocaleString();
+    }
+
+    // Update every 60,000 milliseconds (1 minute)
+    setInterval(updateDateTime, 60000);
+
+    // Initial call to display the date and time immediately
+    updateDateTime();
+</script>
+
+</body>
+</html>
